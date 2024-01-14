@@ -2,5 +2,5 @@
 
 The experiments part of the presentation "Using React without using React"
 
-* Example app built with React - [react.html](./app/react.html)
-* The same app built with Vanilla JavaScript - [react.html](./app/react.html)
+* Example app built with React - [HTML](./app/react.html), [JavaScript](./app/logic-react.js)
+* The same app built with Vanilla JavaScript - [react.html](./app/react.html), [JavaScript](./app/logic-vanilla.js)
