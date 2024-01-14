@@ -1,0 +1,9 @@
+{
+  "name": "USWUS",
+  "dependencies": {
+    "esbuild": "^0.19.11"
+  },
+  "scripts": {
+    "build": "esbuild ./src/logic.tsx --bundle --outdir=dist"
+  }
+}
