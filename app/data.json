@@ -1,0 +1,31 @@
+{
+  "shows": [
+    {
+      "title": "Tom and Jerry",
+      "description": "Tom and Jerry is an American animated series of short films created in 1940 by William Hanna and Joseph Barbera. It centers on a rivalry between its two title characters, Tom and Jerry, and many recurring characters, based around slapstick comedy.",
+      "characters": [
+        { "name": "Tom", "avatar": "./assets/tom.png"},
+        { "name": "Jerry", "avatar": "./assets/jerry.png"},
+        { "name": "Spike", "avatar": "./assets/spike.png"}
+      ]
+    },
+    {
+      "title": "Friends",
+      "description": "Friends is an American television sitcom, created by David Crane and Marta Kauffman, which aired on NBC from September 22, 1994, to May 6, 2004, lasting ten seasons. With an ensemble cast starring Jennifer Aniston, Courteney Cox, Lisa Kudrow, Matt LeBlanc, Matthew Perry and David Schwimmer, the show revolves around six friends in their 20s and 30s who live in Manhattan, New York City.",
+      "characters": [
+        { "name": "Rachel", "avatar": "./assets/rachel.jpg", "actor": "Jennifer Aniston"},
+        { "name": "Joey", "avatar": "./assets/joey.jpg", "actor": "Matt LeBlanc"},
+        { "name": "Monica", "avatar": "./assets/monica.jpg", "actor": "Courteney Cox"}
+      ]
+    },
+    {
+      "title": "Big Bang Theory",
+      "description": "The Big Bang Theory is an American television sitcom created by Chuck Lorre and Bill Prady, both of whom served as executive producers on the series, along with Steven Molaro. All three also served as head writers. The show premiered on CBS on September 24, 2007 and concluded on May 16, 2019, having broadcast a total of 279 episodes over 12 seasons.",
+      "characters": [
+        { "name": "Sheldon", "avatar": "./assets/sheldon.jpeg", "actor": "Jim Parsons"},
+        { "name": "Leonard", "avatar": "./assets/leonard.jpg", "actor": "Johnny Galecki"},
+        { "name": "Penny", "avatar": "./assets/penny.png", "actor": "Kaley Cuoco"}
+      ]
+    }
+  ]
+}

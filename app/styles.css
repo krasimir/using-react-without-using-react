@@ -1,0 +1,107 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+.b { display: block; }
+.tac { text-align: center; }
+.mb1 { margin-bottom: 1em; }
+.mt1 { margin-top: 1em; }
+.nobold { font-weight: normal; }
+section {
+  padding: 2em; 
+}
+section.center {
+  padding: 0 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+select {
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 0.2em;
+}
+.grid {
+  display: grid;
+  gap: 1em;
+  width: 100%;
+}
+.col-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.img-full {
+  display: block;
+  max-width: 100%;
+  min-width: 100%;
+}
+.first-letter::first-letter {
+  font-size: 3.4em;
+  font-weight: bold;
+  float: left;
+  margin-right: 0.2em;
+  font-family: 'Times New Roman', Georgia, Times, serif;
+  line-height: 1em;
+}
+button {
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  max-width: 400px;
+  margin: 0 auto;
+}
+button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+button:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
