@@ -8,7 +8,7 @@ function App() {
   async function getShows() {
     setData(null);
     const response = await fetch('./data.json');
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     const json = await response.json();
     setData(json);
   };

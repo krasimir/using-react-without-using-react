@@ -8,7 +8,7 @@ function App() {
     data = null;
     render();
     const response = await fetch('./data.json');
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
     data = await response.json();
     render();
   };
@@ -66,7 +66,6 @@ function Show(data) {
           .map((item) => Character(item.avatar, item.name, item.actor))
           .join('')
       )}
-      </div>
     </div>
   `;
 }
