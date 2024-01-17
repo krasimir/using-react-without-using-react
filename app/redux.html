@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redux</title>
+</head>
+<body>
+
+<script>
+  // Action types
+  const INCREMENT = 'INCREMENT';
+  const DECREMENT = 'DECREMENT';
+  // Reducer
+  function counterReducer(state = 0, action) {
+    if (action.type === INCREMENT) return state + 1;
+    if (action.type === DECREMENT) return state - 1;
+    return state;
+  }
+  // Store
+  function createStore(reducer) {
+    let state = reducer(undefined, {});
+    const subscribers = [];
+    return {
+      getState: () => state,
+      dispatch: action => {
+        state = reducer(state, action);
+        subscribers.forEach(subscriber => subscriber());
+      },
+      subscribe: subscriber => {
+        subscribers.push(subscriber);
+      },
+    };
+  }
+
+  const store = createStore(counterReducer);
+  store.subscribe(() => console.log(store.getState()));
+  store.dispatch({ type: INCREMENT }); // 1
+  store.dispatch({ type: INCREMENT }); // 2
+  store.dispatch({ type: DECREMENT }); // 1
+  store.dispatch({ type: INCREMENT }); // 2
+</script>
+
+</body>
+</html>
