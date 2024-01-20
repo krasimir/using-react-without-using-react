@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proxy</title>
+</head>
+<body>
+
+<div id="root"></div>
+<script>
+  const state = {
+    counter: 0,
+  }
+  const proxy = new Proxy(state, {
+    set: (target, key, value) => {
+      target[key] = value;
+      render();
+      return true;
+    },
+  });
+  function render() {
+    document.getElementById('root').innerHTML = `
+      <h1>${proxy.counter}</h1>
+      <button onclick="proxy.counter++">+</button>
+      <button onclick="proxy.counter--">-</button>
+    `;
+  }
+  render();
+</script>
+
+</body>
+</html>

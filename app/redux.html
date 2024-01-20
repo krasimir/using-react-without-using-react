@@ -8,13 +8,14 @@
 <body>
 
 <script>
+  const INITIAL_STATE = { counter: 0 };
   // Action types
   const INCREMENT = 'INCREMENT';
   const DECREMENT = 'DECREMENT';
   // Reducer
-  function counterReducer(state = 0, action) {
-    if (action.type === INCREMENT) return state + 1;
-    if (action.type === DECREMENT) return state - 1;
+  function counterReducer(state = INITIAL_STATE, action) {
+    if (action.type === INCREMENT) return { counter: state.counter + 1 };
+    if (action.type === DECREMENT) return { counter: state.counter - 1 };
     return state;
   }
   // Store
@@ -35,10 +36,10 @@
 
   const store = createStore(counterReducer);
   store.subscribe(() => console.log(store.getState()));
-  store.dispatch({ type: INCREMENT }); // 1
-  store.dispatch({ type: INCREMENT }); // 2
-  store.dispatch({ type: DECREMENT }); // 1
-  store.dispatch({ type: INCREMENT }); // 2
+  store.dispatch({ type: INCREMENT }); // {counter: 1}
+  store.dispatch({ type: INCREMENT }); // {counter: 2}
+  store.dispatch({ type: DECREMENT }); // {counter: 1}
+  store.dispatch({ type: INCREMENT }); // {counter: 2}
 </script>
 
 </body>
